@@ -13,7 +13,7 @@ namespace TheMainTask
     public partial class Form1 : Form
     {
         private MainTask task;
-        private int n = 10000;
+        private int n = 5;
 
         public Form1()
         {
@@ -41,6 +41,7 @@ namespace TheMainTask
             double h = 1.0 / n;
             task.GetGrids(ref xi, ref xi2, h);
 
+            n = xi.Count - 1;
             ai = task.GetAi(h, n, xi);
             di = task.GetDi(h, xi2);
             phi = task.GetPhi(h, xi2);

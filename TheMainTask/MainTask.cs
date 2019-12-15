@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Drawing;
 
 namespace TheMainTask
 {
@@ -55,7 +54,7 @@ namespace TheMainTask
 
                     ai.Add(h / result);
                 }
-                else //if ((E < grid[i + 1]) && (E > grid[i]))
+                else// if ((E < grid[i + 1]) && (E > grid[i]))
                 {
                     result = (Math.Log(Math.Sin((E + 1.1) / 2.0)) -
                               Math.Log(Math.Cos((E + 1.1) / 2.0)) -
@@ -84,8 +83,8 @@ namespace TheMainTask
                 }
                 else if ((E < grid[i + 1]) && (E < grid[i]))
                 {
-                    result = Math.Pow(grid[i + 1], 3.0) -
-                             Math.Pow(grid[i], 3.0) /
+                    result = (Math.Pow(grid[i + 1], 3.0) -
+                             Math.Pow(grid[i], 3.0)) /
                              (3.0 * h);
 
                     di.Add(result);
